@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_first"
+    app:startDestination="@id/loginFragmenti">
+
+    <fragment
+        android:id="@+id/loginFragmenti"
+        android:name="com.example.a52finaluri.LoginFragmenti"
+        android:label="LoginFragmenti"
+        tools:layout="@layout/fragmenti_login">
+        <action
+            android:id="@+id/action_loginFragmenti_to_registerFragmenti"
+            app:destination="@id/registerFragmenti" />
+        <action
+            android:id="@+id/action_loginFragmenti_to_resetPassFragmenti"
+            app:destination="@id/resetPassFragmenti" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragmenti"
+        android:name="com.example.a52finaluri.RegisterFragmenti"
+        android:label="RegisterFragmenti"
+        tools:layout="@layout/fragmenti_register">
+        <action
+            android:id="@+id/action_registerFragmenti_to_loginFragmenti"
+            app:destination="@id/loginFragmenti" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassFragmenti"
+        android:name="com.example.a52finaluri.ResetPassFragmenti"
+        android:label="ResetPassFragmenti"
+        tools:layout="@layout/fragmenti_pass_reset">
+        <action
+            android:id="@+id/action_resetPassFragmenti_to_loginFragmenti"
+            app:destination="@id/loginFragmenti" />
+    </fragment>
+</navigation>
